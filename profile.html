@@ -7,65 +7,288 @@
     <title>Kairos Company Profile</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        body {
+            background-color: cornsilk;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 0;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100vw;
+            background-color: burlywood;
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
+
+        .navbar-logo img {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+
+        #navbar {
+            display: flex;
+            gap: 40px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbar li a {
+            text-decoration: none;
+            color: darkgoldenrod;
+            font-size: 20px;
+            padding: 8px 30px;
+            transition: color 0.4s;
+        }
+
+        #navbar li a.active {
+            color: saddlebrown;
+            font-weight: bold;
+        }
+
+        #navbar li a:hover {
+            color: black;
+        }
+
         h1 {
             text-align: center;
+            font-size: 3rem;
+            color: darkgoldenrod;
+            font-family: 'Georgia', serif;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            animation: fadeInScale 1.2s cubic-bezier(.68, -0.55, .27, 1.55);
+        }
+
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.7);
+            }
+
+            80% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        h4 {
+            text-align: center;
+            font-size: 1.2rem;
+            color: saddlebrown;
+            margin-bottom: 30px;
+            font-style: italic;
+            animation: fadeInUp 1.2s;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .profile-content {
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+            background: #fff8e1;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+            padding: 32px 32px 24px 32px;
+            animation: fadeInScale 1.2s;
+        }
+
+        .profile-section {
+            margin-bottom: 32px;
+            padding: 24px 18px;
+            background: #fffdf6;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            animation: fadeInUp 1s;
+        }
+
+        .profile-section.highlight {
+            background: linear-gradient(90deg, #ffe4b5 0%, #fff8e1 100%);
+            border-left: 6px solid burlywood;
+        }
+
+        .profile-section h2,
+        .profile-section h3 {
+            margin-top: 0;
+            margin-bottom: 12px;
+            color: darkgoldenrod;
+            font-family: 'Georgia', serif;
+        }
+
+        .profile-section ul {
+            margin: 0;
+            padding-left: 24px;
+        }
+
+        .profile-section li {
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            animation: fadeInUp 0.8s;
+        }
+
+        .mission {
+            font-size: 1.15rem;
+            color: saddlebrown;
+            font-style: italic;
+            background: #fff8e1;
+            padding: 12px 18px;
+            border-radius: 10px;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+        }
+
+        .location-card {
+            background: #f9f5e7;
+            border-radius: 10px;
+            padding: 14px 18px;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+            font-size: 1.07rem;
+        }
+
+        .location-icon {
+            font-size: 1.3rem;
+            margin-right: 8px;
+            color: saddlebrown;
+        }
+
+        .contact-section {
+            background: linear-gradient(90deg, #ffe4b5 0%, #fff8e1 100%);
+            border-left: 6px solid darkgoldenrod;
+        }
+
+        .contact-card {
+            background: #f9f5e7;
+            border-radius: 10px;
+            padding: 14px 18px;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+            font-size: 1.07rem;
+        }
+
+        .contact-icon {
+            font-size: 1.2rem;
+            margin-right: 8px;
+            color: saddlebrown;
+        }
+
+        .contact-card a {
+            color: darkgoldenrod;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 900px) {
+            .profile-content {
+                padding: 16px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .profile-section {
+                padding: 12px 6px;
+            }
         }
     </style>
 </head>
 
 <body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="Images/Kairos Logo.png" alt="Kairos Logo">
+        </div>
+        <ul id="navbar">
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="profile.html" class="active">Our Profile</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="Talent.html">Register</a></li>
+        </ul>
+    </nav>
+
     <h1>KAIROS HOME SCENTS</h1>
-    <h4>"Scent your Space, Shape your Mood</h4>
-    <header>
-        <nav class="nav">
-            <ul style="margin: 10px;" class="scents" id="navbar">
-                <a class="active" href="Index.html">Home</a>
-                <a class="active" href="profile.html">Our Profile</a>
-                <a class="active" href="About.html">About Us</a>
-                <a class="active" href="Talent.html">Register</a>
+    <h4 class="animated-slogan">Scent your Space, Shape your Mood</h4>
+
+    <div class="profile-content">
+        <section class="profile-section">
+            <h2>What You Need To Know About Us</h2>
+            <p>
+                Born from a desire to bring beauty, calm, and intention into everyday living, our collection includes handcrafted candles, elegant reed diffusers, soothing room sprays, and thoughtfully blended essential oils. Each scent tells a story—crafted to awaken the senses and create a personal atmosphere of comfort and connection.
+            </p>
+        </section>
+        <section class="profile-section highlight">
+            <h3>We are Proudly</h3>
+            <ul>
+                <li>Handcrafted: All our products are made in small batches to preserve quality and care.</li>
+                <li>Sustainable & Clean: We use natural soy wax, toxin-free oils, and recyclable packaging.</li>
+                <li>Rooted in Wellness: Our fragrances are designed to support mood, mindfulness, and well-being.</li>
+                <li>Perfect for Gifting: We offer curated collections and packaging that make every piece feel personal and thoughtful.</li>
             </ul>
-        </nav>
-    </header>
-        <h2>What You Need To Know About Us</h2>
-        <p>Born from a desire to bring beauty, calm, and intention into everyday living, our collection includes
-            handcrafted candles, elegant reed diffusers, soothing room sprays, and thoughtfully blended essential oils.<br>Each scent
-            tells a story—crafted to awaken the senses and create a personal atmosphere of comfort and connection.</p>
-        <ul>
-            <strong>We are Proudly</strong>
-            <li>Handcrafted: All our products are made in small batches to preserve quality and care.</li>
-            <li>Sustainable & Clean: We use natural soy wax, toxin-free oils, and recyclable packaging.</li>
-            <li>Rooted in Wellness: Our fragrances are designed to support mood, mindfulness, and well-being.</li>
-            <li>Perfect for Gifting: We offer curated collections and packaging that make every piece feel personal and
-                thoughtful.</li>
-        </ul>
-        <p><b>Our Mission:</b>
-            To create meaningful moments through scent. One flicker, one breath, one room at a time.
-        </p>
-        <h3>Our Product Line</h3>
-        <ul>
-            <li>Signature Candles</li>
-            <li>Reed Diffusers</li>
-            <li>Room & Linen Sprays</li>
-            <li>Essential Oil Blends</li>
-            <li>Custom Scented Gifts & Bundles</li>
-        </ul>
-        <h3>Sentimental Points for our clients:</h3>
-        <ul>
-            <li>Fragrance is the invisible thread that ties us to moments, memories, and moods.</li>
-            <li>Scent is memory, emotion, atmosphere—it's how a home breathes.</li>
-            <li>Scent Creates Atmosphere Before You Say a Word</li>
-            <li>It’s the Little Things That Make Life Beautiful</li>
-            <li>Home Is a Feeling You Create</li>
-        </ul>
-        <h3>Location</h3>
-        <p>Kampala-Uganda
-            <br>Bugolobi Rd, Luthuli Avenue
-        </p>
-        <h3>Contact us</h3>
-        Tel:+256782958887<br>+256786030167<br>
-        Website: kairoshomescents.com<br>
-        Email: kairoshomescents@gmail.com<br>
-        Instagram: KairosHomeScents</p>
+        </section>
+        <section class="profile-section">
+            <p class="mission"><b>Our Mission:</b> To create meaningful moments through scent. One flicker, one breath, one room at a time.</p>
+        </section>
+        <section class="profile-section highlight">
+            <h3>Our Product Line</h3>
+            <ul>
+                <li>Signature Candles</li>
+                <li>Reed Diffusers</li>
+                <li>Room & Linen Sprays</li>
+                <li>Essential Oil Blends</li>
+                <li>Custom Scented Gifts & Bundles</li>
+            </ul>
+        </section>
+        <section class="profile-section">
+            <h3>Sentimental Points for our clients:</h3>
+            <ul>
+                <li>Fragrance is the invisible thread that ties us to moments, memories, and moods.</li>
+                <li>Scent is memory, emotion, atmosphere—it's how a home breathes.</li>
+                <li>Scent Creates Atmosphere Before You Say a Word</li>
+                <li>It’s the Little Things That Make Life Beautiful</li>
+                <li>Home Is a Feeling You Create</li>
+            </ul>
+        </section>
+        <section class="profile-section highlight">
+            <h3>Location</h3>
+            <div class="location-card">
+                <p>
+                    <span class="location-icon">📍</span>
+                    Kampala-Uganda<br>
+                    Bugolobi Rd, Luthuli Avenue
+                </p>
+            </div>
+        </section>
+        <section class="profile-section contact-section">
+            <h3>Contact us</h3>
+            <div class="contact-card">
+                <p>
+                    <span class="contact-icon">📞</span> Tel: +256782958887<br>
+                    <span class="contact-icon">📞</span> +256786030167<br>
+                    <span class="contact-icon">🌐</span> Website: <a href="https://kairoshomescents.com" target="_blank">kairoshomescents.com</a><br>
+                    <span class="contact-icon">✉️</span> Email: <a href="mailto:kairoshomescents@gmail.com">kairoshomescents@gmail.com</a><br>
+                    <span class="contact-icon">📸</span> Instagram: <a href="https://instagram.com/KairosHomeScents" target="_blank">KairosHomeScents</a>
+                </p>
+            </div>
+        </section>
+    </div>
 </body>
 
 </html>

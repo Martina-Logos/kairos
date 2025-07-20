@@ -92,7 +92,7 @@
     .section-group {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 12px; /* Reduced gap for closer images */
       align-items: start;
       justify-items: center;
       margin-bottom: 40px;
@@ -125,6 +125,9 @@
       overflow: hidden;
       cursor: pointer;
       transition: transform 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .product-card:hover {
       transform: scale(1.02);
@@ -136,11 +139,14 @@
       right: 0;
       bottom: 0;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       background: rgba(0, 0, 0, 0.7);
       opacity: 0;
       transition: opacity 0.3s;
+      border-radius: 16px;
+      padding: 16px 0;
     }
     .product-card:hover .product-overlay {
       opacity: 1;
@@ -148,16 +154,23 @@
     .product-price {
       font-size: 1.2rem;
       color: #fff;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
+      font-weight: bold;
+    }
+    .product-icons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
     }
     .cart-btn, .like-btn, .view-btn {
       background: transparent;
       border: none;
       color: #fff;
       font-size: 1.5rem;
-      margin: 0 5px;
       cursor: pointer;
       transition: transform 0.3s;
+      padding: 0;
     }
     .cart-btn:hover, .like-btn:hover, .view-btn:hover {
       transform: scale(1.2);
@@ -168,9 +181,9 @@
       }
       .section-group {
         grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
+        gap: 10px;
       }
-      .section-group img {
+      .product-card, .section-group img {
         width: 44vw;
         height: auto;
       }
@@ -208,30 +221,15 @@
     <h3>ROOM SPRAYS</h3>
     <div class="product-card">
       <img src="Images/Black Currant and Jasmine Room Spray.jpg" alt="Black Currant and Jasmine Room Spray" class="animated-img">
-      <div class="product-overlay">
-        <span class="product-price">$19.99</span>
-        <button class="cart-btn">🛒</button>
-        <button class="like-btn">❤️</button>
-        <button class="view-btn">👁️</button>
-      </div>
+      <div class="product-overlay"></div>
     </div>
     <div class="product-card">
       <img src="Images/Blossom Room Spray.jpg" alt="Blossom Room Spray" class="animated-img">
-      <div class="product-overlay">
-        <span class="product-price">$19.99</span>
-        <button class="cart-btn">🛒</button>
-        <button class="like-btn">❤️</button>
-        <button class="view-btn">👁️</button>
-      </div>
+      <div class="product-overlay"></div>
     </div>
     <div class="product-card">
       <img src="Images/Calm Room Spray _ Natural Lavender Spray _ Lavender, Bergamot, Ylang Ylang & Frankincense Essential oils _ Relaxing Aromatherapy Spray.jpg" alt="Calm Room Spray" class="animated-img">
-      <div class="product-overlay">
-        <span class="product-price">$19.99</span>
-        <button class="cart-btn">🛒</button>
-        <button class="like-btn">❤️</button>
-        <button class="view-btn">👁️</button>
-      </div>
+      <div class="product-overlay"></div>
     </div>
   </div>
 
@@ -239,30 +237,15 @@
     <h3>SCENTED CANDLES</h3>
     <div class="product-card">
       <img src="Images/Chocolate candle set.jpg" alt="Chocolate Candle Set" class="animated-img">
-      <div class="product-overlay">
-        <span class="product-price">$19.99</span>
-        <button class="cart-btn">🛒</button>
-        <button class="like-btn">❤️</button>
-        <button class="view-btn">👁️</button>
-      </div>
+      <div class="product-overlay"></div>
     </div>
     <div class="product-card">
       <img src="Images/Colorful soy candles.jpg" alt="Colorful Soy Candles" class="animated-img">
-      <div class="product-overlay">
-        <span class="product-price">$19.99</span>
-        <button class="cart-btn">🛒</button>
-        <button class="like-btn">❤️</button>
-        <button class="view-btn">👁️</button>
-      </div>
+      <div class="product-overlay"></div>
     </div>
     <div class="product-card">
       <img src="Images/Bathroom set.jpg" alt="Bathroom Candle Set" class="animated-img">
-      <div class="product-overlay">
-        <span class="product-price">$19.99</span>
-        <button class="cart-btn">🛒</button>
-        <button class="like-btn">❤️</button>
-        <button class="view-btn">👁️</button>
-      </div>
+      <div class="product-overlay"></div>
     </div>
   </div>
 
@@ -270,30 +253,15 @@
     <h3>DIFFUSERS</h3>
     <div class="product-card">
       <img src="Images/Room Diffusers.jpg" alt="Room Diffusers" class="animated-img">
-      <div class="product-overlay">
-        <span class="product-price">$19.99</span>
-        <button class="cart-btn">🛒</button>
-        <button class="like-btn">❤️</button>
-        <button class="view-btn">👁️</button>
-      </div>
+      <div class="product-overlay"></div>
     </div>
     <div class="product-card">
       <img src="Images/Flavoured Air Diffuser.jpg" alt="Flavoured Air Diffuser" class="animated-img">
-      <div class="product-overlay">
-        <span class="product-price">$19.99</span>
-        <button class="cart-btn">🛒</button>
-        <button class="like-btn">❤️</button>
-        <button class="view-btn">👁️</button>
-      </div>
+      <div class="product-overlay"></div>
     </div>
     <div class="product-card">
       <img src="Images/EverGreen Reed Diffuser.jpg" alt="EverGreen Reed Diffuser" class="animated-img">
-      <div class="product-overlay">
-        <span class="product-price">$19.99</span>
-        <button class="cart-btn">🛒</button>
-        <button class="like-btn">❤️</button>
-        <button class="view-btn">👁️</button>
-      </div>
+      <div class="product-overlay"></div>
     </div>
   </div>
 
@@ -301,30 +269,15 @@
     <h3>LINEN SPRAYS</h3>
     <div class="product-card">
       <img src="Images/Essential Oil Linen Sprays.jpg" alt="Essential Oil Linen Sprays" class="animated-img">
-      <div class="product-overlay">
-        <span class="product-price">$19.99</span>
-        <button class="cart-btn">🛒</button>
-        <button class="like-btn">❤️</button>
-        <button class="view-btn">👁️</button>
-      </div>
+      <div class="product-overlay"></div>
     </div>
     <div class="product-card">
       <img src="Images/Organic Linen Sprays - Destress.jpg" alt="Organic Linen Sprays - Destress" class="animated-img">
-      <div class="product-overlay">
-        <span class="product-price">$19.99</span>
-        <button class="cart-btn">🛒</button>
-        <button class="like-btn">❤️</button>
-        <button class="view-btn">👁️</button>
-      </div>
+      <div class="product-overlay"></div>
     </div>
     <div class="product-card">
       <img src="Images/Mood Linen Spray.jpeg" alt="Mood Linen Spray" class="animated-img">
-      <div class="product-overlay">
-        <span class="product-price">$19.99</span>
-        <button class="cart-btn">🛒</button>
-        <button class="like-btn">❤️</button>
-        <button class="view-btn">👁️</button>
-      </div>
+      <div class="product-overlay"></div>
     </div>
   </div>
 
@@ -332,30 +285,15 @@
     <h3>LUXURY COLLECTIONS</h3>
     <div class="product-card">
       <img src="Images/Luxury set.jpg" alt="Luxury Set" class="animated-img">
-      <div class="product-overlay">
-        <span class="product-price">$19.99</span>
-        <button class="cart-btn">🛒</button>
-        <button class="like-btn">❤️</button>
-        <button class="view-btn">👁️</button>
-      </div>
+      <div class="product-overlay"></div>
     </div>
     <div class="product-card">
       <img src="Images/Rain Forest Collection.jpeg" alt="Rain Forest Collection" class="animated-img">
-      <div class="product-overlay">
-        <span class="product-price">$19.99</span>
-        <button class="cart-btn">🛒</button>
-        <button class="like-btn">❤️</button>
-        <button class="view-btn">👁️</button>
-      </div>
+      <div class="product-overlay"></div>
     </div>
     <div class="product-card">
       <img src="Images/Citrus Collection.jpeg" alt="Citrus Collection" class="animated-img">
-      <div class="product-overlay">
-        <span class="product-price">$19.99</span>
-        <button class="cart-btn">🛒</button>
-        <button class="like-btn">❤️</button>
-        <button class="view-btn">👁️</button>
-      </div>
+      <div class="product-overlay"></div>
     </div>
   </div>
 
@@ -363,30 +301,15 @@
     <h3>TRAVEL COLLECTION</h3>
     <div class="product-card">
       <img src="Images/Fall travel candles.jpg" alt="Fall Travel Candles" class="animated-img">
-      <div class="product-overlay">
-        <span class="product-price">$19.99</span>
-        <button class="cart-btn">🛒</button>
-        <button class="like-btn">❤️</button>
-        <button class="view-btn">👁️</button>
-      </div>
+      <div class="product-overlay"></div>
     </div>
     <div class="product-card">
       <img src="Images/Week's Scented Candles.jpg" alt="Week's Scented Candles" class="animated-img">
-      <div class="product-overlay">
-        <span class="product-price">$19.99</span>
-        <button class="cart-btn">🛒</button>
-        <button class="like-btn">❤️</button>
-        <button class="view-btn">👁️</button>
-      </div>
+      <div class="product-overlay"></div>
     </div>
     <div class="product-card">
       <img src="Images/Sentimental candles.jpg" alt="Sentimental Candles" class="animated-img">
-      <div class="product-overlay">
-        <span class="product-price">$19.99</span>
-        <button class="cart-btn">🛒</button>
-        <button class="like-btn">❤️</button>
-        <button class="view-btn">👁️</button>
-      </div>
+      <div class="product-overlay"></div>
     </div>
   </div>
 </body>

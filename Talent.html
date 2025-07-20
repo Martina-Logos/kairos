@@ -7,56 +7,219 @@
     <title>Register | Kairos Home Scents</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        body {
+            background-color: cornsilk;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 0;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100vw;
+            background-color: burlywood;
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
+        .navbar-logo img {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+        #navbar {
+            display: flex;
+            gap: 40px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        #navbar li a {
+            text-decoration: none;
+            color: darkgoldenrod;
+            font-size: 20px;
+            padding: 8px 30px;
+            transition: color 0.4s;
+        }
+        #navbar li a.active {
+            color: saddlebrown;
+            font-weight: bold;
+        }
+        #navbar li a:hover {
+            color: black;
+        }
         h1 {
             text-align: center;
+            font-size: 3rem;
+            color: darkgoldenrod;
+            font-family: 'Georgia', serif;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            animation: fadeInScale 1.2s cubic-bezier(.68,-0.55,.27,1.55);
         }
-        h2{
+        @keyframes fadeInScale {
+            0% { opacity: 0; transform: scale(0.7);}
+            80% { opacity: 1; transform: scale(1.05);}
+            100% { opacity: 1; transform: scale(1);}
+        }
+        h4.animated-slogan {
             text-align: center;
+            font-size: 1.5rem;
+            color: saddlebrown;
+            font-style: italic;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            animation: infiniteSlogan 3s infinite alternate cubic-bezier(.68,-0.55,.27,1.55);
+        }
+        @keyframes infiniteSlogan {
+            0% { color: saddlebrown; transform: scale(1); text-shadow: 0 2px 8px rgba(222,184,135,0.15);}
+            50% { color: darkgoldenrod; transform: scale(1.08); text-shadow: 0 8px 24px rgba(222,184,135,0.25);}
+            100% { color: #b8860b; transform: scale(1); text-shadow: 0 2px 8px rgba(222,184,135,0.15);}
+        }
+        .register-content {
+            max-width: 700px;
+            margin: 32px auto;
+            background: #fff8e1;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+            padding: 32px 32px 24px 32px;
+            animation: fadeInScale 1.2s;
+        }
+        h2 {
+            text-align: center;
+            color: darkgoldenrod;
+            font-family: 'Georgia', serif;
+            margin-bottom: 18px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        label {
+            font-size: 1rem;
+            color: saddlebrown;
+            margin-bottom: 4px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="date"] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #e2c48d;
+            font-size: 1rem;
+            background: #fffdf6;
+            margin-bottom: 8px;
+        }
+        input[type="radio"] {
+            margin-right: 6px;
+        }
+        input[type="submit"] {
+            background: darkgoldenrod;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 14px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 12px;
+            transition: background 0.3s;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background: saddlebrown;
+        }
+        .form-note {
+            font-size: 1rem;
+            color: #222;
+            margin-bottom: 8px;
+        }
+        @media (max-width: 900px) {
+            .register-content {
+                padding: 12px;
+            }
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+        .form-row {
+            display: flex;
+            gap: 24px;
+        }
+        .form-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
     </style>
 </head>
 
 <body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="Images/Kairos Logo.png" alt="Kairos Logo">
+        </div>
+        <ul id="navbar">
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="profile.html">Our Profile</a></li>
+            <li><a href="Talent.html" class="active">Register</a></li>
+        </ul>
+    </nav>
+
     <h1>KAIROS HOME SCENTS</h1>
-    <h4>"Scent your Space, Shape your Mood"</h4>
-    <header>
-        <nav class="nav">
-            <ul class="scents" id="navbar">
-                <a class="active" href="Index.html">Home</a>
-                <a class="active" href="About.html">About us</a>
-                <a class="active" href="profile.html">Our Profile</a>
-                <a class="active" href="Talent.html">Register</a>
-            </ul>
-        </nav>
-    </header>
-    <h2>"Where Fragrance becomes Feeling"</h2>
-    <h2>Create Account</h2>
-    <form id="RegisterForm" action="">
-        <label for="name">Full name:</label>
-        <input type="text" id="name">
-        <br>
-        <label for="email">Email:</label>
-        <input id="email" type="email">
-        <br>
-        <label for="password">Password:</label>
-        <input id="password" type="password">
-        <br>
-        <label for="number">Contact:</label>
-        <input id="number" type="tel">
-        <br>
-        <label for="date">Date Of Birth:</label>
-        <input id="date" type="date">
-        <br>
-        <label>Gender</label>
-        <input type="radio" name="gender" value="female" id="female">
-        <label for="male">Female</label>
-        <input type="radio" name="gender" value="male" id="male">
-        <label for="female">Male</label>
-        <p>What's your best Fragrance note?</p>
-        <input id="text" type="text">
-        <br><br>
-        <input type="submit" value="Register">
-    </form>
+    <h4 class="animated-slogan">Scent your Space, Shape your Mood</h4>
+
+    <div class="register-content">
+        <h2>"Where Fragrance becomes Feeling"</h2>
+        <h2>Create Account</h2>
+        <form id="RegisterForm" action="">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Full name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input id="password" type="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="number">Contact:</label>
+                    <input id="number" type="tel" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="date">Date Of Birth:</label>
+                    <input id="date" type="date" required>
+                </div>
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div style="display: flex; gap: 12px;">
+                        <input type="radio" name="gender" value="female" id="female">
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender" value="male" id="male">
+                        <label for="male">Male</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group" style="width:100%;">
+                    <label for="fragrance">What's your best Fragrance note?</label>
+                    <input id="fragrance" type="text">
+                </div>
+            </div>
+            <input type="submit" value="Register">
+        </form>
+    </div>
 </body>
 
 </html>
