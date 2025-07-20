@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Who We Are | Kairos Home Scents</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-color: cornsilk;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      margin: 0;
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100vw;
+      background-color: burlywood;
+      padding: 0 40px;
+      box-sizing: border-box;
+    }
+    .navbar-logo img {
+      width: 80px;
+      height: 80px;
+      margin-right: 20px;
+    }
+    #navbar {
+      display: flex;
+      gap: 40px;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    #navbar li a {
+      text-decoration: none;
+      color: darkgoldenrod;
+      font-size: 20px;
+      padding: 8px 30px;
+      transition: color 0.4s;
+    }
+    #navbar li a.active {
+      color: saddlebrown;
+      font-weight: bold;
+    }
+    #navbar li a:hover {
+      color: black;
+    }
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      color: darkgoldenrod;
+      font-family: 'Georgia', serif;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+      animation: fadeInScale 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.7);}
+      80% { opacity: 1; transform: scale(1.05);}
+      100% { opacity: 1; transform: scale(1);}
+    }
+    h4 {
+      text-align: center;
+      font-size: 1.2rem;
+      color: saddlebrown;
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+    .about-content {
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+      background: #fff8e1;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      padding: 32px 32px 24px 32px;
+    }
+    .about-content h3 {
+      color: darkgoldenrod;
+      margin-top: 24px;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+    .about-content p {
+      color: #222;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    .section-group {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      align-items: start;
+      justify-items: center;
+      margin-bottom: 40px;
+    }
+    .section-group h3 {
+      grid-column: 1 / -1;
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+      letter-spacing: 1px;
+      color: saddlebrown;
+    }
+    .section-group img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+      transition: transform 0.5s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.5s;
+    }
+    .section-group img:hover {
+      transform: scale(1.06) rotate(-2deg);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    }
+    @media (max-width: 900px) {
+      .about-content {
+        padding: 16px;
+      }
+      .section-group {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      .section-group img {
+        width: 44vw;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <img src="Images/Kairos Logo.png" alt="Kairos Logo">
+    </div>
+    <ul id="navbar">
+      <li><a href="Index.html">Home</a></li>
+      <li><a href="About.html" class="active">About Us</a></li>
+      <li><a href="profile.html">Our Profile</a></li>
+      <li><a href="Talent.html">Register</a></li>
+    </ul>
+  </nav>
+
+  <h1>Kairos Home Scents</h1>
+  <h4>"Scent your Space, Shape your Mood"</h4>
+
+  <div class="about-content">
+    <h3>Partnerships & Collaborations</h3>
+    <p>We proudly partner with boutiques, spas, interior stylists, and gifting services. Custom branding and private label options are available upon request.</p>
+    <p>For the past decade, we have transformed homes into sanctuaries of peace and comfort by infusing scents that evoke warm memories and relaxation.</p>
+    <p>With ever-growing customer satisfaction, we are delighted to serve generations to come.</p>
+    <p>We appreciate our clients for choosing us to be part of their luxurious memories and comfort. As they say, "East or West, Home is best," and we strive to make every home a healing sanctuary.</p>
+    <h3>Product Categories</h3>
+    <p>Our range includes: Scented Candles, Reed Diffusers, Air Mists, Room & Linen Sprays, and Essential Oils.</p>
+  </div>
+
+  <div class="section-group">
+    <h3>ROOM SPRAYS</h3>
+    <img src="Images/Black Currant and Jasmine Room Spray.jpg" alt="Black Currant and Jasmine Room Spray" class="animated-img">
+    <img src="Images/Blossom Room Spray.jpg" alt="Blossom Room Spray" class="animated-img">
+    <img src="Images/Calm Room Spray _ Natural Lavender Spray _ Lavender, Bergamot, Ylang Ylang & Frankincense Essential oils _ Relaxing Aromatherapy Spray.jpg" alt="Calm Room Spray" class="animated-img">
+  </div>
+
+  <div class="section-group">
+    <h3>SCENTED CANDLES</h3>
+    <img src="Images/Chocolate candle set.jpg" alt="Chocolate Candle Set" class="animated-img">
+    <img src="Images/Colorful soy candles.jpg" alt="Colorful Soy Candles" class="animated-img">
+    <img src="Images/Bathroom set.jpg" alt="Bathroom Candle Set" class="animated-img">
+  </div>
+
+  <div class="section-group">
+    <h3>DIFFUSERS</h3>
+    <img src="Images/Room Diffusers.jpg" alt="Room Diffusers" class="animated-img">
+    <img src="Images/Flavoured Air Diffuser.jpg" alt="Flavoured Air Diffuser" class="animated-img">
+    <img src="Images/EverGreen Reed Diffuser.jpg" alt="EverGreen Reed Diffuser" class="animated-img">
+  </div>
+
+  <div class="section-group">
+    <h3>LINEN SPRAYS</h3>
+    <img src="Images/Essential Oil Linen Sprays.jpg" alt="Essential Oil Linen Sprays" class="animated-img">
+    <img src="Images/Organic Linen Sprays - Destress.jpg" alt="Organic Linen Sprays - Destress" class="animated-img">
+    <img src="Images/Mood Linen Spray.jpeg" alt="Mood Linen Spray" class="animated-img">
+  </div>
+
+  <div class="section-group">
+    <h3>LUXURY COLLECTIONS</h3>
+    <img src="Images/Luxury set.jpg" alt="Luxury Set" class="animated-img">
+    <img src="Images/Rain Forest Collection.jpeg" alt="Rain Forest Collection" class="animated-img">
+    <img src="Images/Citrus Collection.jpeg" alt="Citrus Collection" class="animated-img">
+  </div>
+
+  <div class="section-group">
+    <h3>TRAVEL COLLECTION</h3>
+    <img src="Images/Fall travel candles.jpg" alt="Fall Travel Candles" class="animated-img">
+    <img src="Images/Week's Scented Candles.jpg" alt="Week's Scented Candles" class="animated-img">
+    <img src="Images/Sentimental candles.jpg" alt="Sentimental Candles" class="animated-img">
+  </div>
+</body>
+</html>

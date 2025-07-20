@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namutebi Martina- Founder| Kaios Home Scents</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Full-width navbar with logo inside */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100vw;
+            background-color: burlywood;
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-logo img {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+
+        #navbar {
+            display: flex;
+            gap: 40px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbar li a {
+            text-decoration: none;
+            color: darkgoldenrod;
+            font-size: 20px;
+            padding: 8px 30px;
+        }
+
+        #navbar li a.active {
+            color: saddlebrown;
+            font-weight: bold;
+        }
+
+        #navbar li a:hover {
+            color: black;
+            transition: all 0.5s ease;
+        }
+
+        /* Animated company name */
+        .company-title {
+            text-align: center;
+            font-size: 3.5rem;
+            font-family: 'Georgia', serif;
+            color: darkgoldenrod;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            animation: fadeInScale 1.2s cubic-bezier(.68, -0.55, .27, 1.55);
+        }
+
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.7);
+            }
+
+            80% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Founder section styling */
+        .founder-section {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+            margin: 40px auto 0 auto;
+            max-width: 1100px;
+        }
+
+        .founder-photo {
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+            width: 320px;
+            height: 320px;
+            object-fit: cover;
+            transition: transform 0.5s cubic-bezier(.68, -0.55, .27, 1.55), box-shadow 0.5s;
+        }
+
+        .founder-photo:hover {
+            transform: scale(1.05) rotate(-2deg);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.22);
+        }
+
+        .founder-details {
+            max-width: 500px;
+            text-align: left;
+        }
+
+        .founder-details h2 {
+            font-size: 1.6rem;
+            color: #222;
+            margin-bottom: 8px;
+            font-family: 'Georgia', serif;
+        }
+
+        .founder-details h3 {
+            font-size: 1.1rem;
+            color: saddlebrown;
+            margin-bottom: 18px;
+        }
+
+        .founder-details p {
+            font-size: 1rem;
+            color: #222;
+            line-height: 1.5;
+        }
+
+        body {
+            background-color: cornsilk;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 0;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        @media (max-width: 900px) {
+            .founder-section {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .company-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="Images/Kairos Logo.png" alt="Kairos Logo">
+        </div>
+        <ul class="scents" id="navbar">
+            <li><a href="Index.html" class="active">Home</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="profile.html">Our Profile</a></li>
+            <li><a href="Talent.html">Register</a></li>
+        </ul>
+    </nav>
+
+    <div class="company-title">Kairos Home Scents</div>
+
+    <div class="founder-section" style="margin-top:40px;">
+        <img class="founder-photo" src="/Images/KHS-CEO.jpg" alt="Founder Photo">
+        <div class="founder-details" style="display: flex; flex-direction: column; justify-content: center;">
+            <p style="font-size:1.15rem; color:#222; line-height:1.7; margin-bottom:24px;">
+                Kairos Home Scents was born from a passion for creating spaces that inspire calm and comfort. I believe the
+                right scent transforms a room and uplifts the spirit. Our mission is to bring lasting serenity and
+                memorable experiences to every home.
+            </p>
+            <h2 style="font-size:2rem; color:#222; margin-bottom:8px; font-family:'Georgia',serif;">NAMUTEBI MARTINA
+            </h2>
+            <h3 style="font-size:1.2rem; color:saddlebrown; margin-bottom:0;">Founder and CEO</h3>
+        </div>
+    </div>
+</body>
+
+</html>
