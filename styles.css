@@ -3,7 +3,7 @@
     text-align: center;
     justify-content: center;
     background-color:burlywood;
-    list-style-type: none;
+    list-style-type:none;
     /* margin-top: 8px; */
     padding: 20px;
     font-size: 20px;
@@ -51,8 +51,7 @@ input,select{
 }
 label{
     display:block;
-    margin-top: 10px;
-    
+    margin-top: 10px; 
     font-weight: bold;
 }
 
